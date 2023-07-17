@@ -60,7 +60,9 @@ def select_actions(actions):
 
 
 def main():
-    select_actions(knapsack(read_csv("dataset1.csv")))
+    select_actions(knapsack(read_csv("dataset1")))
+    # select_actions(knapsack(read_csv("dataset2")))
+    # select_actions(knapsack(actions))
 
 
 if __name__ == '__main__':
