@@ -27,12 +27,14 @@ actions = [
 
 def combine_actions(actions):
     combinations_list = []
+    # make all possible combinations with combinations from itertools
     for r in range(1, len(actions) + 1):
         combinations_list.extend(combinations(actions, r))
     return combinations_list
 
 
 def keep_valid_combinations(combinations):
+    # valid combinations must have a total cost not exceeding the budget
     valid_combinations = []
     for combination in combinations:
         total_cost = sum(action["cost"] for action in combination)
